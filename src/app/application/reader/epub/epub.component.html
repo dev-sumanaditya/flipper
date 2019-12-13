@@ -1,0 +1,38 @@
+<div class="container" [class.containerDarkmode]="darkmode">
+    <div class="main">
+        <div class="viewer">
+            <angular-epub-viewer #epubViewer></angular-epub-viewer>
+            <div class="divider"></div>
+        </div>
+        
+    </div>
+    <div class="overlay" [class.hide]="!displayOverlay" [class.navDarkMode]="darkmode">
+        <div class="navs">
+          <div class="left nav"><i class="fa fa-angle-left" aria-hidden="true" (click)="epubViewer.previousPage()"></i></div>
+          <div class="spacer" (click)="toggleHide()"></div>
+          <div class="right nav"><i class="fa fa-angle-right" aria-hidden="true" (click)="epubViewer.nextPage()"></i></div>
+        </div>
+        <div class="bottomBar">
+          <div class="progbar">
+                <div class="progtrack" [style.width]="rWidth+'%'"></div>
+                <input type="range" min="1" max="1000" value="300" class="slider" id="prog" (input)="trackchange($event)">
+          </div>
+          <div class="size item">
+              <i class="fa fa-plus-square" (click)="incrementFont()" aria-hidden="true"></i>
+              <i class="fa fa-minus-square two" (click)="decrementFont()" aria-hidden="true"></i>
+          </div>
+          <div class="item">
+                <i class="fa fa-moon-o" *ngIf="!darkmode" aria-hidden="true" (click)="dark()"></i>
+                <i class="fa fa-sun-o" *ngIf="darkmode" aria-hidden="true" (click)="resetStyle()"></i>
+          </div>
+          <div class="chapters item">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="fullscr item">
+              <i class="fa fa-arrows-alt" *ngIf="!fullscr" aria-hidden="true" (click)="toggleFullscreen()"></i>
+              <i class="fa fa-compress" *ngIf="fullscr" aria-hidden="true" (click)="toggleFullscreen()"></i>
+          </div>
+        </div>
+        <div class="close" (click)="close()"><i class="fa fa-times" aria-hidden="true"></i></div>
+    </div>
+</div>

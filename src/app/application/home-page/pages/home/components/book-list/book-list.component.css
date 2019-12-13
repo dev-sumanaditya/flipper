@@ -1,0 +1,89 @@
+.main {
+    color: white;
+}
+
+.head {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ddd;
+    padding: 45px 0 15px 60px;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slider {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+
+.items {
+    display: flex;
+    margin: 0 45px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 12px;
+    border-radius: 3px;
+    width: min-content;
+    cursor: pointer;
+}
+
+.thumb {
+    height: 180px;
+    width: 130px;
+    background-size: cover;
+    border: 2px solid black;
+}
+.thumb:hover {
+    border: 2px solid #ddd;
+}
+
+
+
+.nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+.nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.nav i {
+    font-size: 40px;
+}
+.navl {
+    left: 0;
+}
+.navr {
+    right: 0;
+}
+
+.navDisable {
+    display: none;
+}

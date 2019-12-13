@@ -1,0 +1,65 @@
+<div class="main">
+  <div class="head">{{head}}</div>
+  <div class="container">
+      <div class="slider" #Content (scroll)="scroll($event)">
+          <div class="items">
+              <div class="item" *ngFor="let item of items" [routerLink]="['/en/details']"
+                [popper]="HoverDetail"
+                [popperShowOnStart]="false"
+                [popperTrigger]="'hover'"
+                [popperHideOnClickOutside]="true"
+                [popperHideOnScroll]="true"
+                [popperPlacement]="'right'"
+                [popperApplyClass]="'hoverDetail'"
+                [popperDisableStyle]="false"
+                [popperDelay]="600"
+                [popperHideOnMouseLeave]="false"
+                [popperTimeout]="400"
+                (popperOnShown)="poppershow()"
+                (popperOnHidden)="popperhide()"
+              >
+                <div class="thumb" [style.background-image]="'url(' + item.img + ')'"></div>
+              </div>
+
+              <popper-content #HoverDetail [class.hide]="!show">
+                  <div class="main">
+                    <div class="content">
+                      <div class="titl">Book Title - Ch 1</div>
+                      <div class="author">Author</div>
+                      <div class="info">
+                        <div class="rating it">4.5 <i class="fa fa-star-o" aria-hidden="true"></i></div>
+                        <div class="year it">2017</div>
+                        <div class="age it">16+</div>
+                      </div>
+                      <div class="short">
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to
+                      </div>
+                      <div class="read">
+                        <div class="btn" [routerLink]="['/en/reader']">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </div>
+                        <div class="prog">
+                          <div class="txt">Chapter 12</div>
+                          <div class="bar">
+                            <div class="p"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="options">
+                        <div class="opt"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
+                        <div class="opt"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                        <div class="opt buy"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
+                      </div>
+                    </div>
+                  </div>
+              </popper-content>
+              
+          </div>
+      </div>
+    
+        <div class="navl nav" [class.navDisable]="navl" (click)="scrollLeft()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>          
+        <div class="navr nav" [class.navDisable]="navr" (click)="scrollRight()"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+    </div>
+</div>
+
+

@@ -1,0 +1,80 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 60px;
+}
+
+.cat .lead {
+    font-size: 32px;
+    font-weight: 500;
+    color: #ddd;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.cat .items {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-flow: wrap;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cat .item {
+    color: #ddd;
+    display: flex;
+    min-height: 60px;
+    width: 23.6% !important;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 1.2%;
+    margin-bottom: 20px;
+    /*background-image: linear-gradient(to right, #434343 0%, black 100%);*/
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/46/66/3158577b67946b9.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    outline: none;
+}
+
+
+.item .fill {
+    display: flex;
+    flex-grow: 1;
+    border: 0px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 5.15%;
+    align-items: center; 
+    background-image: linear-gradient(to right, #3636364f 0%, rgba(0, 0, 0,0.8) 50%, rgb(0, 0, 0) 100%);
+    -webkit-transition: background-image 1s ease-out 1s;
+    transition: background-image 1s ease-out 1s;
+}
+
+.item:hover {
+    background: linear-gradient(-45deg, #ec2005, #770fec, #f30909, #d52323) !important;
+	background-size: 400% 400% !important;
+	animation: gradientBG 4.5s ease infinite !important;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -1,0 +1,140 @@
+.main {
+    padding: 0px;
+}
+
+
+.history {
+    margin-top: 70px;
+}
+.head {
+    font-size: 34px;
+    font-weight: 700;
+    color: #ddd;
+    padding: 45px 0 15px 60px;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    color: white;
+    margin-top: 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.item .l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 12px;
+    border-radius: 3px;
+    width: min-content;
+    cursor: pointer;
+}
+
+.item .l .thumb {
+    height: 180px;
+    width: 130px;
+    background-size: cover;
+    border: 2px solid black;
+    background-image: url(https://image.ebooks.com/previews/209/209531/209531421/209531421-sml-1.jpg);
+}
+
+.item .r {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.item .r .title {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+}
+
+.item .r .author {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.item .r .info {
+    display: flex;
+    margin: 10px 0;
+}
+
+.item .r .info .it {
+    padding-right: 20px;
+    font-size: 13px;
+    color: rgba(221, 221, 221, 0.7);
+    font-weight: 300;
+}
+
+.item .r .short {
+    font-size: 14px;
+    font-weight: 400;
+    word-wrap: break-word !important;
+    white-space: pre-line !important;
+    max-width: 70%;
+}
+
+.item .r .read {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.item .r .read .btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    cursor: pointer;
+}
+
+.item .r .read .btn:hover {
+    background-color: rgb(253, 71, 71);;
+}
+
+.item .r .read .btn i {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+.item .r .read .prog {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    flex-grow: 1;
+}
+
+.item .r .read .prog .txt {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.item .r .read .prog .bar {
+    height: 5px;
+    background-color: rgb(255, 152, 152);
+    display: flex;
+    margin-top: 4px;
+    width: 30%;
+}
+
+.item .r .read .prog .bar .p {
+    height: 5px;
+    background-color: red;
+    width: 60%;
+}

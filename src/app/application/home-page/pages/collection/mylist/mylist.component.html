@@ -1,0 +1,37 @@
+<div class="main">
+  <app-book-list [head]="'Your favorites'"></app-book-list>
+
+  <div class="history">
+    <div class="head">Reading History</div>
+    <div class="list">
+      <div class="item" *ngFor="let i of items">
+        <div class="l">
+            <div class="thumb"></div>
+        </div>
+        <div class="r">
+            <div class="title">The Warning</div>
+            <div class="author">Author</div>
+            <div class="info">
+              <div class="rating it">4.5 <i class="fa fa-star-o" aria-hidden="true"></i></div>
+              <div class="year it">2017</div>
+              <div class="age it">16+</div>
+            </div>
+            <div class="short">
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to
+            </div>
+            <div class="read">
+                <div class="btn">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </div>
+                <div class="prog">
+                  <div class="txt">Continue Reading - Ch 12</div>
+                  <div class="bar">
+                    <div class="p"></div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

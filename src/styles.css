@@ -1,1 +1,275 @@
-/* You can add global styles to this file, and also import other style files */
+
+html,body {
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+
+.owl-stage-outer {
+    height: 100%;
+}
+.owl-stage {
+    height: 100%;
+}
+
+.owl-responsive {
+    width: 100% !important;
+    box-sizing: border-box;
+}
+.owl-carousel {
+    height: 300px;
+    position: relative !important;
+}
+
+.owl-nav {
+    margin: 0 !important;
+    box-sizing: border-box;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.owl-prev {
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px !important;
+    padding: 20px !important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) !important;
+    border-radius: 0px !important;
+}
+.owl-prev:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) !important;
+}
+.owl-prev i {
+    text-shadow: 1px 3px 5px #000;
+}
+
+.owl-next {
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px !important;
+    padding: 25px !important;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) !important;
+    border-radius: 0px !important;
+}
+.owl-next:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) !important;
+}
+.owl-next i {
+    text-shadow: 1px 3px 5px #000;
+}
+
+.owl-nav .disabled {
+    visibility: hidden !important;
+}
+
+
+.owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.owl-dot span {
+    background: rgba(221, 221, 221, 0.5) !important;
+    padding: 1.5px;
+    box-shadow: 0px 2px 5px -2px black;
+    margin: 5px !important;
+}
+
+.active span {
+    background: white !important;
+}
+
+.hoverDetail {
+    z-index: 50 !important;
+    background: rgb(52, 50, 54);
+    border: none !important;
+    left: 4px !important;
+    top: 95px !important;
+    border-radius: 8px;
+    display: flex !important;
+    width: 300px;
+    flex-direction: column;
+    padding: 0px !important;
+    box-shadow: 0px 2px 20px 5px #000 !important;
+}
+.hoverDetail .ngxp__arrow {
+    top: 30px !important;
+    height: 2px !important;
+}
+
+.hoverDetail .main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.hoverDetail .content {
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.hoverDetail .content .titl {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+}
+
+.hoverDetail .content .author {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hoverDetail .info {
+    display: flex;
+    margin: 10px 0;
+}
+
+.hoverDetail .info .it {
+    padding-right: 20px;
+    font-size: 13px;
+    color: rgba(221, 221, 221, 0.7);
+    font-weight: 300;
+}
+
+.hoverDetail .short {
+    font-size: 14px;
+    font-weight: 400;
+    word-wrap: break-word !important;
+    white-space: pre-line !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.hoverDetail .read {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.hoverDetail .read .btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    cursor: pointer;
+    outline: none;
+}
+.hoverDetail .read .btn:hover {
+    background-color: rgb(253, 71, 71);;
+}
+
+.hoverDetail .read .btn i {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+.hoverDetail .read .prog {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    flex-grow: 1;
+}
+
+.hoverDetail .read .prog .txt {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hoverDetail .read .prog .bar {
+    height: 5px;
+    background-color: rgb(255, 152, 152);
+    display: flex;
+    margin-top: 4px;
+}
+.hoverDetail .read .prog .bar .p {
+    height: 5px;
+    background-color: red;
+    width: 60%;
+}
+
+.hoverDetail .options {
+    display: flex;
+    padding: 5px 0 0 2px;
+}
+.hoverDetail .options .opt {
+    margin-right: 30px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+}
+.hoverDetail .options .opt  i {
+    font-size: 18px;
+    margin-top: 2px;
+    margin-left: 0px;
+}
+.hoverDetail .options .opt:hover i {
+    font-size: 22px !important;
+}
+
+.hoverDetail .options .buy i {
+    color: rgb(16, 175, 16);
+    font-size: 18px !important;
+}
+
+
+
+
+.profileDrop {
+    background: rgb(52, 50, 54);
+    top: 50px !important;
+    left: 60px !important;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 2px 20px -5px #000;
+}
+
+.profileDrop .navs {
+    display: flex;
+    flex-direction: column !important;
+    margin: 0 !important;
+}
+.profileDrop .navs .nv {
+    padding: 20px 75px 20px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ddd;
+    border-bottom: 1px solid rgb(74, 73, 75);
+    cursor: pointer;
+}
+.profileDrop .navs .nv:hover {
+    background: rgb(74, 73, 75);
+}
+
+
+
+/* application loading */
+app-root:empty + .loading {
+    opacity: 1;
+    z-index: 100;
+}

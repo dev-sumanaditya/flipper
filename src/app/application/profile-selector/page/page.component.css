@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: black;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.brand {
+    color: rgb(199, 14, 14);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+    user-select: none;
+}
+
+.manage {
+    color: rgba(221, 221, 221, 0.6);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: sans-serif;
+    user-select: none;
+    outline: none;
+}
+.manage:hover {
+    color: white;
+}
+
+.manage i {
+    margin-right: 6px;
+    font-size: 21px;
+}
+
+.ctr2 {
+    display: flex;
+    flex-grow: 1;   
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+

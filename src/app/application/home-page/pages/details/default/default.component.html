@@ -1,0 +1,65 @@
+<div class="main">
+  <div class="background">
+    <div class="cover"></div>
+    <div class="l"></div>
+    <div class="img"></div>
+  </div>
+
+  <div class="content">
+    <div class="top">
+      <h1>Steve Jobs</h1>
+      <div class="navs">
+        <div class="nav">4.1 <i class="fa fa-star-o" aria-hidden="true"></i></div>
+        <div class="nav">2011</div>
+        <div class="nav"><i class="fa fa-file-text-o" aria-hidden="true"></i> 240 Pages</div>
+        <div class="nav"><i class="fa fa-clock-o" aria-hidden="true"></i> 4 - 6 hours</div>
+        <div class="nav">16+</div>
+        <div class="nav"><i class="fa fa-eye" aria-hidden="true"></i>20k</div>
+      </div>
+      <div class="synop">From the author of the bestselling biographies of Benjamin Franklin and Albert Einstein, this is the exclusive, New York Times bestselling biography of Apple co-founder Steve Jobs.
+
+          Based on more than forty interviews with Jobs conducted over two years—as well as interviews with more than a hundred family members, friends, adversaries, competitors, and colleagues—Walter Isaa...
+      </div>
+      <div class="genres">
+        <div class="genre">Biographies & Memoirs</div>
+        <div class="genre">Thriller</div>
+      </div>
+      <div class="action">
+        <div class="watch">
+          <div class="play" [routerLink]="['/en/reader']"><i class="fa fa-play" aria-hidden="true"></i></div>
+          Continue reading
+        </div>
+        <div class="buy">
+          <div class="btn" [routerLink]="['/en/buy']">
+            <p class="btnText"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Paperback</p>
+            <div class="btnTwo">
+              <p class="btnText2"><i class="fa fa-inr" aria-hidden="true"></i> 220.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="item">
+          <div class="l">Chapters</div>
+          <div class="r">18</div>
+        </div>
+        <div class="item">
+          <div class="l">Author</div>
+          <div class="r"><a href="en">Walter Isaacson</a></div>
+        </div>
+        <div class="item">
+          <div class="l">Language</div>
+          <div class="r">English</div>
+        </div>
+        <div class="item">
+          <div class="l">Publisher</div>
+          <div class="r">Simon & Schuster</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="more">
+    <app-book-list></app-book-list>
+</div>

@@ -1,0 +1,25 @@
+<div class="main">
+  <app-book-list [head]="'Top 100'"></app-book-list>
+
+  <div class="cat">
+    <div class="lead">Fiction</div>
+    <div class="items">
+      <div class="item" *ngFor="let i of fiction"  [routerLink]="['/en/categories/genre']">
+        <div class="fill">
+            {{i.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat">
+    <div class="lead">Non-Fiction</div>
+    <div class="items">
+        <div class="item" *ngFor="let i of nonFiction" [routerLink]="['/en/categories/genre']">
+            <div class="fill">
+                {{i.name}}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

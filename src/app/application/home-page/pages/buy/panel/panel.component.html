@@ -1,0 +1,53 @@
+<div class="main">
+  <div class="top">
+    <div class="l">
+      <div class="img">
+        <div class="thumb"></div>
+      </div>
+    </div>
+    <div class="r">
+      <h1 class="name">A Game of Thrones</h1>
+      <h2 class="author">George R R Martin</h2>
+      <div class="navs">
+          <div class="nav">4.1 <i class="fa fa-star-o" aria-hidden="true"></i></div>
+          <div class="nav">16+</div>
+          <div class="nav"><i class="fa fa-file-text-o" aria-hidden="true"></i> English</div>
+      </div>
+      <div class="price">
+        <p class="lead">Special price</p>
+        <div class="pr">
+          <div class="val"><i class="fa fa-inr" aria-hidden="true"></i>220</div>
+          <div class="actual"><i class="fa fa-inr" aria-hidden="true"></i>350</div>
+          <div class="discount">38% off</div>
+        </div>
+      </div>
+      <div class="delivery">
+        <div class="tag">Delivery</div>
+        <div class="more">
+          <div class="input">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <input type="text" maxlength="6" placeholder="Enter Pincode">
+            <span class="check">Check</span>
+          </div>
+          <div class="info">Delivery by 20 Sep, Friday</div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <div class="add btn" (click)="addToCartFn()"><span *ngIf="!addingToCart && !addedToCart"><i class="fa fa-cart-plus" aria-hidden="true"></i>ADD TO CART</span><img *ngIf="addingToCart" src="assets/spin10.svg" alt=""><span *ngIf="addedToCart">Added To Cart</span></div>
+        <div class="buy btn"><i class="fa fa-rocket" aria-hidden="true"></i> BUY NOW</div>
+      </div>
+
+      <div class="details">
+        <div class="detail" *ngFor="let i of data">
+          <div class="tag">
+            {{i.tag}}
+          </div>
+          <div class="items">
+            <div class="item" *ngFor="let j of i.details"><i class="fa fa-circle" aria-hidden="true"></i>{{j}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

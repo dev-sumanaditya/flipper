@@ -1,0 +1,85 @@
+.ctr {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+}
+.top .avatar {
+    height: 100px;
+    width: 100px;
+    background-image: url('https://cdn2.iconfinder.com/data/icons/flatfaces-everyday-people-square/128/beard_male_man_face_avatar-512.png');
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 30px;
+    position: relative;
+}
+
+.avatar .edit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+.edit i {
+    color: rgba(221, 221, 221, 0.8);
+    padding: 7px 8px;
+    border: 2px solid rgba(221, 221, 221, 0.8);
+    border-radius: 50%;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.edit:hover i {
+    color: white;
+    border: 2px solid white;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.top .right input {
+    border: 2px solid rgba(221, 221, 221, 0.4);
+    background-color: black;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #ddd;
+    width: 250px;
+    margin-top: 3px;
+    outline: none;
+}
+.top .right input:focus {
+    border: 2px solid rgb(111, 111, 223);
+}
+
+
+.save {
+    color: rgba(221, 221, 221, 0.6);
+    font-size: 20px;
+    font-weight: 300;
+    font-family: sans-serif;
+    user-select: none;
+    outline: none;
+    width: max-content;
+}
+.save:hover {
+    color: white;
+}
+
+.save i {
+    margin-right: 6px;
+    font-size: 21px;
+}

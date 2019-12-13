@@ -1,0 +1,40 @@
+.select {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    overflow: hidden;
+    color: rgba(221, 221, 221, 0.6);
+    user-select: none;
+    outline: none;
+}
+
+.user:hover {
+    color: #fff;
+}
+.user:hover .img {
+    border: 3px solid #ddd;
+}
+
+
+.img {
+    height: 100px;
+    width: 100px;
+    background-image: url('https://cdn2.iconfinder.com/data/icons/flatfaces-everyday-people-square/128/beard_male_man_face_avatar-512.png');
+    background-size: cover;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+}

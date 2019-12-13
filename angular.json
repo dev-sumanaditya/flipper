@@ -23,9 +23,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.green.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/epubjs/build/epub.js",
+              "node_modules/epubjs/build/hooks.js",
+              "node_modules/epubjs/build/libs/zip.min.js",
+              "node_modules/epubjs/build/libs/localforage.min.js",
+              "node_modules/epubjs/examples/wgxpath.install.js",
+              "node_modules/epubjs/hooks/extensions/wgxpath.js",
+              "node_modules/epubjs/hooks/default/endnotes.js",
+              "node_modules/epubjs/hooks/default/smartimages.js",
+              "node_modules/epubjs/hooks/default/transculsions.js",
+            ]
           },
           "configurations": {
             "production": {
@@ -81,7 +95,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

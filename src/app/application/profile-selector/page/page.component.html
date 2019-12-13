@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="nav">
+    <div class="brand">FLIPPER</div>
+    <div class="manage" *ngIf="state == 'user'" (click)="openManage()" [routerLink]="['./manage']"><i class="fa fa-cog" aria-hidden="true"></i>Manage</div>
+    <div class="manage" *ngIf="state == 'manage'" (click)="close()" [routerLink]="['./']"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</div>
+    <div class="manage" *ngIf="state == 'edit'" (click)="openManage()" [routerLink]="['./manage']"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</div>
+  </div>
+
+  <div class="ctr2">
+    <router-outlet></router-outlet>
+  </div>
+</div>

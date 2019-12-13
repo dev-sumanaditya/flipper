@@ -1,0 +1,247 @@
+.containerDarkmode {
+    background: #000 !important;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #ddd;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    flex-direction: column;
+}
+
+.viewer {
+    height: 80%;
+    width: 80%;
+    position: relative;
+    background: transparent !important;
+    user-select: none !important;
+}
+.main .divider {
+    position: absolute;
+    width: 1px;
+    border-right: 1px #000 solid;
+    height: 100%;
+    z-index: 1;
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+    opacity: .15;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 1);
+}
+
+.options {
+    margin-top: 20px;
+}
+
+.options button {
+    margin-right: 20px;
+    padding: 4px 10px;
+    border-radius: 30px;
+    border: 1px solid rgb(161, 160, 160);
+    background: rgb(204, 209, 238);
+    outline: none;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0px -50px 140px 20px #000;
+    transition-duration: 1s;
+    color: black;
+}
+
+.overlay .divs {
+    z-index: 100;
+}
+.overlay .navs {
+    display: flex;
+    flex-direction: row;
+    height: 88%;
+}
+
+.overlay .navs .spacer {
+    flex-grow: 1;
+    visibility: hidden;
+    user-select: none !important;
+}
+
+.navs .nav {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navs .nav i {
+    font-size: 80px;
+    cursor: pointer;
+    transition-duration: 0.15s;
+    opacity: 0.4;
+}
+.navs .nav i:hover {
+    font-size: 100px;
+    opacity: 0.7;
+}
+.navs .nav i:active {
+    opacity: 0.8;
+}
+
+.close {
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.15s;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+.close:hover {
+    font-size: 25px;
+}
+.close:active {
+    opacity: 0.7;
+}
+.close:hover i {
+    font-size: 40px;
+}
+.close i {
+    font-size: 30px;
+    margin-right: 10px;
+    margin-top: -4px;
+    transition-duration: 0.2s;
+}
+
+.hide {
+    display: none !important;
+}
+
+.navDarkMode {
+    color: white !important;
+}
+
+.bottomBar {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 40px;
+}
+
+.bottomBar .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.bottomBar .size .two {
+    margin-left: 7px;
+}
+
+.bottomBar .item i {
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0.8;
+    color: white;
+    transition-duration: 0.2s;
+    padding-right: 0;
+}
+.bottomBar .item i:hover {
+    font-size: 35px;
+    opacity: 0.99;
+}
+
+
+.bottomBar .progbar {
+    flex-grow: 1;
+    margin-right: 50px;
+    position: relative;
+}
+.bottomBar .progbar input {
+    width: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(221, 221, 221, 0.15);
+    opacity: 0.8;
+    height: 4px;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+.bottomBar .progbar input:hover {
+    opacity: 1;
+    
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 0, 0);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+.slider::-webkit-slider-thumb:hover {
+    height: 22px;
+    width: 22px;
+}
+  
+.slider::-moz-range-thumb {
+    width: 20px; 
+    height: 20px; 
+    background: crimson;
+    cursor: pointer; 
+    box-sizing: border-box;
+}
+
+.slider::-ms-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 0, 0);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+.progbar .progtrack {
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 4px;
+    width: 30%;
+    border-radius: 3px;
+    background-color: red;
+    z-index: -1;
+}

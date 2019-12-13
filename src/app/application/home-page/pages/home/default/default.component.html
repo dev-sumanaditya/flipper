@@ -1,0 +1,14 @@
+<div class="main" id="main">
+  <owl-carousel-o [options]="carouselOptions">
+    <ng-container *ngFor="let slide of slidesStore">
+      <ng-template carouselSlide>
+        <div>
+            <img [src]="slide.image">
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+
+
+<app-book-list *ngFor="let data of headings" [head]="data.name"></app-book-list>

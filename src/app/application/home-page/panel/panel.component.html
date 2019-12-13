@@ -1,0 +1,66 @@
+<div class="container" #Cage
+infiniteScroll
+[infiniteScrollDistance]="1"
+[infiniteScrollThrottle]="100"
+[scrollWindow]="false"
+(scrolled)="onScroll()"
+>
+  <div class="navbar">
+    <div class="brand" [routerLink]="['/en']">FLIPPER</div>
+    <div class="navs">
+      <div class="nav" [routerLink]="['/en']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="selected-nav">Home</div>
+      <div class="nav" [routerLink]="['/en/categories']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="selected-nav">Categories</div>
+      <div class="nav" [routerLink]="['/en/library']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="selected-nav">Library</div>
+    </div>
+    <div class="spacer"></div>
+
+    <div class="search">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="text" placeholder="Search" spellcheck="false">
+    </div>
+    
+    <div class="profile"
+    [popper]="ProfileDrop"
+    [popperShowOnStart]="false"
+    [popperTrigger]="'click'"
+    [popperHideOnClickOutside]="true"
+    [popperHideOnScroll]="false"
+    [popperPlacement]="'left'"
+    [popperApplyClass]="'profileDrop'"
+    [popperDisableStyle]="true"
+    [popperDelay]="0"
+    [popperHideOnMouseLeave]="false"
+    [popperTimeout]="0"
+    (popperOnShown)="poppershow()"
+    (popperOnHidden)="popperhide()"
+    [popperBoundaries]="'Cage'"
+    >
+      <i class="fa fa-user-o av" aria-hidden="true"></i>
+      <i class="fa fa-angle-down drop" aria-hidden="true"></i>
+    </div>
+    <popper-content #ProfileDrop [class.hide]="!show">
+      <div class="navs">
+        <div class="nv">My Cart</div>
+        <div class="nv">Account and Settings</div>
+        <div class="nv">Help</div>
+        <div class="nv" [routerLink]="['/en/user']">Switch User</div>
+        <div class="nv">Sign Out</div>
+      </div>
+    </popper-content>
+
+  </div>
+  <div class="routeProg slider" *ngIf="routerLoading">
+      <div class="line"></div>
+      <div class="subline inc"></div>
+      <div class="subline dec"></div>
+  </div>
+
+
+  <div class="output">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="footr">
+    <!-- Footer -->  
+  </div>
+</div>
