@@ -23,7 +23,7 @@
     "angular-epub-viewer": "^0.1.4",
     "animate.css": "^3.7.2",
     "core-js": "^2.5.4",
-    "epubjs": "^0.2.21",
+    "epubjs": "^0.3.89",
     "ngx-infinite-scroll": "^7.0.0",
     "ngx-owl-carousel-o": "^2.0.1",
     "ngx-popper": "^7.0.0",
